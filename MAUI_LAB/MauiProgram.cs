@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Maui;
+using DevExpress.Maui;
 
 namespace MAUI_LAB;
 
@@ -9,6 +10,7 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
+			.UseDevExpress()
 			.UsePrism(prism => {
 				// Register Services and setup initial Navigation
 				prism.RegisterTypes(container =>

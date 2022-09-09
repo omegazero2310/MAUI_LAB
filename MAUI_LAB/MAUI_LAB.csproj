@@ -62,4 +62,16 @@
 	  <PackageReference Include="Prism.Maui" Version="8.1.273-pre" />
 	</ItemGroup>
 
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-android'">
+	  <PackageReference Include="DevExpress.Maui.Editors">
+	    <Version>22.1.5</Version>
+	  </PackageReference>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-ios'">
+	  <PackageReference Include="DevExpress.Maui.Editors">
+	    <Version>22.1.5</Version>
+	  </PackageReference>
+	</ItemGroup>
+
 </Project>
