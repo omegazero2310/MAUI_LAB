@@ -35,7 +35,8 @@ public static class MauiProgram
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			});
+                fonts.AddFont("MaterialIcons-Regular.ttf", "MaterialIcons");
+            });
 
 		return builder.Build();
 	}
@@ -45,7 +46,8 @@ public static class PlatformInitializer
     public static void RegisterTypes(IContainerRegistry containerRegistry)
     {
 		// Register any platform specific implementations
-		containerRegistry.Register<IAdminPartServices, AdminPartServices>();
+		containerRegistry.RegisterInstance(typeof(HttpClient));
+        containerRegistry.Register<IAdminPartServices, AdminPartServices>();
 		containerRegistry.Register<IAdminStaffServices, AdminStaffServices>();
 		containerRegistry.Register<IAdminUserServices, AdminUserServices>();
 
@@ -57,10 +59,6 @@ public static class PlatformInitializer
     }	
 	public static async void OnAppStart(INavigationService navigationService)
 	{
-		//var result = await navigationService.NavigateAsync("LoginPage");
-		//if (!result.Success)
-		//{
-		//	System.Diagnostics.Debugger.Break();
-		//}
+		//navigationService.CreateBuilder().AddSegment<LoginViewModel>().Navigate();
 	}	
 }

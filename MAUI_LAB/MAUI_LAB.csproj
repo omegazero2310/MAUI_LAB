@@ -49,6 +49,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\MaterialIcons-Regular.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Folder Include="Helper\" />
 	  <Folder Include="ImageResource\" />
 	  <Folder Include="ViewModels\" />
