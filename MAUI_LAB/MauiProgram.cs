@@ -1,5 +1,9 @@
 ﻿using CommunityToolkit.Maui;
 using DevExpress.Maui;
+using MAUI_LAB.Services;
+using MAUI_LAB.Services.Interface;
+using MAUI_LAB.ViewModels;
+using MAUI_LAB.Views;
 
 namespace MAUI_LAB;
 
@@ -40,7 +44,12 @@ public static class PlatformInitializer
 {
     public static void RegisterTypes(IContainerRegistry containerRegistry)
     {
-        // Register any platform specific implementations
+		// Register any platform specific implementations
+		containerRegistry.Register<IAdminPartServices, AdminPartServices>();
+		containerRegistry.Register<IAdminStaffServices, AdminStaffServices>();
+		containerRegistry.Register<IAdminUserServices, AdminUserServices>();
+
+		containerRegistry.RegisterForNavigation<LoginPage, LoginViewModel>();
     }
 	public static async void OnInit()
 	{
@@ -48,6 +57,10 @@ public static class PlatformInitializer
     }	
 	public static async void OnAppStart(INavigationService navigationService)
 	{
-        await navigationService.NavigateAsync("NavigationPage/MainPage");
-    }	
+		//var result = await navigationService.NavigateAsync("LoginPage");
+		//if (!result.Success)
+		//{
+		//	System.Diagnostics.Debugger.Break();
+		//}
+	}	
 }
