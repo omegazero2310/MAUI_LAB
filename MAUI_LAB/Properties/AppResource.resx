@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Account_App_Version" xml:space="preserve">
+    <value>App Version</value>
+  </data>
+  <data name="Account_Change_Password" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="Account_Confirm_Logout_Msg" xml:space="preserve">
+    <value>Are you sure you want to log out ?</value>
+  </data>
+  <data name="Account_Confirm_Logout_Title" xml:space="preserve">
+    <value>Confirm log out</value>
+  </data>
+  <data name="Account_Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Account_Rate_App" xml:space="preserve">
+    <value>Rate App</value>
+  </data>
+  <data name="Account_Setting" xml:space="preserve">
+    <value>App Setting</value>
+  </data>
+  <data name="Account_Staff_Info" xml:space="preserve">
+    <value>Staff Info</value>
+  </data>
+  <data name="Confirm_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Confirm_Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Confirm_Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Gender_Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="Gender_Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="Gender_Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="Label_Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Label_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Label_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Label_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Label_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Label_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Label_Gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="Label_PhoneNumber" xml:space="preserve">
+    <value>Phone number</value>
+  </data>
+  <data name="Label_Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Label_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Label_StaffName" xml:space="preserve">
+    <value>Staff name</value>
+  </data>
+  <data name="Label_Staff_Add" xml:space="preserve">
+    <value>Add new staff</value>
+  </data>
+  <data name="Label_Staff_Delete" xml:space="preserve">
+    <value>Delete staff</value>
+  </data>
+  <data name="Label_Staff_List" xml:space="preserve">
+    <value>Staff List</value>
+  </data>
+  <data name="Label_Staff_Update" xml:space="preserve">
+    <value>Update staff info</value>
+  </data>
+  <data name="Label_Staff_View" xml:space="preserve">
+    <value>View staff detail</value>
+  </data>
+  <data name="Language_En_US" xml:space="preserve">
+    <value>English - US</value>
+  </data>
+  <data name="Language_Vi_VN" xml:space="preserve">
+    <value>Tiếng Việt</value>
+  </data>
+  <data name="Main_Page_LabelSelectLanguage" xml:space="preserve">
+    <value>Select Language</value>
+  </data>
+  <data name="Main_Page_PlaceHolderPassword" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Main_Page_PlaceHolderUserName" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="Main_Page_TextForgotPassword" xml:space="preserve">
+    <value>Forgot Password ?</value>
+  </data>
+  <data name="Main_Page_TextLogin" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Main_Page_TextRememberPassword" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="Main_Page_TextVersion" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Main_Tabbed_Page_Account" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="Main_Tabbed_Page_Bell" xml:space="preserve">
+    <value>Notification</value>
+  </data>
+  <data name="Main_Tabbed_Page_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Main_Tabbed_Page_Listing" xml:space="preserve">
+    <value>Staff Listing</value>
+  </data>
+  <data name="MSG_ADDRESS_CANNOT_EMPTY" xml:space="preserve">
+    <value>Address cannot be emtpy</value>
+  </data>
+  <data name="MSG_ADDRESS_CONTAIN_SPECIALCHARACTERS" xml:space="preserve">
+    <value>Address cannot contain some specical characters</value>
+  </data>
+  <data name="MSG_CONFIRM_DELETE" xml:space="preserve">
+    <value>Are you sure to delete driver {0} - {1} ?</value>
+  </data>
+  <data name="MSG_CONFIRM_DELETE_TITLE" xml:space="preserve">
+    <value>Confirm Delete</value>
+  </data>
+  <data name="MSG_DISCONNECTED" xml:space="preserve">
+    <value>No Network Connection</value>
+  </data>
+  <data name="MSG_EMAIL_NOT_EMPTY" xml:space="preserve">
+    <value>Email cannot be empty</value>
+  </data>
+  <data name="MSG_EMAIL_NOT_VALID" xml:space="preserve">
+    <value>Email not valid</value>
+  </data>
+  <data name="MSG_ENTER_PASSWORD" xml:space="preserve">
+    <value>Password cannot be empty</value>
+  </data>
+  <data name="MSG_ENTER_USER_ID" xml:space="preserve">
+    <value>User ID cannot be empty</value>
+  </data>
+  <data name="MSG_GENDER_NOT_VALID" xml:space="preserve">
+    <value>Select valid gender</value>
+  </data>
+  <data name="MSG_LOGIN_ERROR" xml:space="preserve">
+    <value>Login Error</value>
+  </data>
+  <data name="MSG_PHONE_NUMBER_CONTAIN_SPECIALCHARACTERS" xml:space="preserve">
+    <value>Phone Number cannot contain some specical characters</value>
+  </data>
+  <data name="MSG_PHONE_NUMBER_NOT_EMPTY" xml:space="preserve">
+    <value>Phone number must not be emtpy</value>
+  </data>
+  <data name="MSG_PHONE_NUMBER_NOT_VALID" xml:space="preserve">
+    <value>Phone Number not valid</value>
+  </data>
+  <data name="MSG_PHONE_NUMBER_NUMBER_ONLY" xml:space="preserve">
+    <value>Phone number contain word, contain number only</value>
+  </data>
+  <data name="MSG_POSITION_NOT_VALID" xml:space="preserve">
+    <value>Select valid Position</value>
+  </data>
+  <data name="MSG_STAFF_DELETED" xml:space="preserve">
+    <value>Staff Deleted</value>
+  </data>
+  <data name="MSG_STAFF_DUPLICATE_EMAIL" xml:space="preserve">
+    <value>Email Exist</value>
+  </data>
+  <data name="MSG_STAFF_PHONE_NUMBER" xml:space="preserve">
+    <value>Phone Number Exist</value>
+  </data>
+  <data name="MSG_USER_EXIST" xml:space="preserve">
+    <value>User exist, please choose other User ID</value>
+  </data>
+  <data name="MSG_USER_LOGIN_BANNED" xml:space="preserve">
+    <value>Account banned</value>
+  </data>
+  <data name="MSG_USER_LOGIN_NOT_EXIST" xml:space="preserve">
+    <value>Not exist user on the system</value>
+  </data>
+  <data name="MSG_USER_LOGIN_SUPPENDED" xml:space="preserve">
+    <value>Account temporary Suppended</value>
+  </data>
+  <data name="MSG_USER_LOGIN_WRONG_USERNAME_OR_PASSWORD" xml:space="preserve">
+    <value>Wrong User ID or Password</value>
+  </data>
+  <data name="MSG_USER_NAME_CONTAIN_SPECIALCHARACTERS" xml:space="preserve">
+    <value>User Name cannot contain some specical characters</value>
+  </data>
+  <data name="MSG_USER_NAME_NOT_EMPTY" xml:space="preserve">
+    <value>User name cannot be emtpy</value>
+  </data>
+  <data name="MSG_USER_NAME_OVER_CHARACTER" xml:space="preserve">
+    <value>User name character is over 50</value>
+  </data>
+  <data name="Picker_Select_Gender" xml:space="preserve">
+    <value>Select Gender</value>
+  </data>
+  <data name="Picker_Select_Position" xml:space="preserve">
+    <value>Select Position</value>
+  </data>
+  <data name="PlaceHolder_Address" xml:space="preserve">
+    <value>Enter address</value>
+  </data>
+  <data name="PlaceHolder_Email" xml:space="preserve">
+    <value>Enter Email</value>
+  </data>
+  <data name="PlaceHolder_PhoneNumber" xml:space="preserve">
+    <value>Enter phone number</value>
+  </data>
+  <data name="PlaceHolder_SearchBar" xml:space="preserve">
+    <value>Search staff</value>
+  </data>
+  <data name="PlaceHolder_StaffName" xml:space="preserve">
+    <value>Enter staff name</value>
+  </data>
+  <data name="Position_GD" xml:space="preserve">
+    <value>Manager</value>
+  </data>
+  <data name="Position_NV" xml:space="preserve">
+    <value>Staff</value>
+  </data>
+  <data name="Position_TP" xml:space="preserve">
+    <value>Chief of Department</value>
+  </data>
+  <data name="Select_Filter_Options" xml:space="preserve">
+    <value>Select Filter Options</value>
+  </data>
+</root>

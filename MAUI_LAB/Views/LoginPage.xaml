@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:helper="clr-namespace:MAUI_LAB.Helper"
+             xmlns:trg="clr-namespace:MAUI_LAB.Helper.Trigger"
+             xmlns:behaviors="clr-namespace:MAUI_LAB.Helper.Behaviors"
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
+             x:Class="MAUI_LAB.Views.LoginPage"
+             Title="LoginPage">
+
+
+    <AbsoluteLayout>
+        <VerticalStackLayout x:Name="Main"  AbsoluteLayout.LayoutBounds="0,0,1,1"
+                 AbsoluteLayout.LayoutFlags="All" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <!--#region ảnh đăng nhập-->
+
+                <Frame Grid.Row="0"
+                   Padding="0"
+                   HasShadow="True"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Fill"
+                   CornerRadius="10" Margin="0" >
+                    <Image Source="loginpicture.png" Aspect="AspectFill"></Image>
+                </Frame>
+                <Frame Grid.Row="0" 
+                   CornerRadius="5" 
+                   Padding="0" 
+                   BackgroundColor="Transparent"
+                   Opacity="10" 
+                   HorizontalOptions="EndAndExpand" 
+                   VerticalOptions="StartAndExpand" 
+                   Margin="0,0,5,0">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,20,-5,0" >
+                        <Image Source="{Binding ImageLanguage}" HeightRequest="30" WidthRequest="30"/>
+                        <Picker Title="{helper:Translate Main_Page_LabelSelectLanguage}" 
+                        HorizontalOptions="CenterAndExpand" 
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="95"
+                        TextColor="WhiteSmoke"
+                        HorizontalTextAlignment="Center"
+                        ItemsSource="{Binding ListLanguages}"
+                        SelectedItem="{Binding SelectedLanguage}">
+                        </Picker>
+                    </StackLayout>
+
+                </Frame>
+                <!--#endregion-->
+
+                <!--#region Phần các control-->
+                <VerticalStackLayout Grid.Row="1" Padding="0,50,0,0" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <!--#region trường tên đăng nhập-->
+                        <dxe:TextEdit Grid.Row="0" PlaceholderText="User Name" StartIcon="person48.png">
+                            <dxe:TextEdit.Behaviors>
+                                <behaviors:SpecialCharactersValidationBehavior />
+                            </dxe:TextEdit.Behaviors>
+                        </dxe:TextEdit>
+                        <!--#endregion-->
+
+                        <!--#region trường mật khẩu-->
+                        <Grid Padding="25,0" Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="20*"/>
+                            </Grid.ColumnDefinitions>
+
+                        <ImageButton Grid.Column="0" Source="lock48.png" HorizontalOptions="Center" Aspect="AspectFit"  VerticalOptions="CenterAndExpand"/>
+                            <Entry Grid.Column="1" Placeholder="{helper:Translate Main_Page_PlaceHolderPassword}" Text="{Binding Password}" ReturnType="Done"
+                                IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}" MaxLength="50">
+                                <Entry.Behaviors>
+                                    <behaviors:SpecialCharactersValidationBehavior />
+                                </Entry.Behaviors>
+                            </Entry>
+                            <ImageButton Grid.Column="1" VerticalOptions="Center"
+                                HeightRequest="20"
+                                HorizontalOptions="End"
+                                Source="visibility48.png">
+                                <ImageButton.Triggers>
+                                    <EventTrigger Event="Clicked">
+                                        <trg:ShowPasswordTriggerAction ShowIcon="visibility48.png"
+                                                              HideIcon="visibility_off48.png"
+                                                              x:Name="ShowPasswordActualTrigger"/>
+                                    </EventTrigger>
+                                </ImageButton.Triggers>
+                            </ImageButton>
+                        </Grid>
+                        <!--#endregion-->
+
+                        <!--#region nhớ thông tin đăng nhập và quên mật khẩu-->
+                        <Grid Grid.Row="2" Padding="25,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout Grid.Column="0" Orientation="Horizontal" HorizontalOptions="Start">
+                                <CheckBox HorizontalOptions="Center" VerticalOptions="Center" IsChecked="{Binding IsSaveLoginInfo}"/>
+                                <Label Text="{helper:Translate Main_Page_TextRememberPassword}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column="1" Orientation="Horizontal" HorizontalOptions="End">
+                                <Label HorizontalOptions="End" VerticalOptions="Center">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{helper:Translate Main_Page_TextForgotPassword}"
+                                          TextDecorations="Underline">
+                                                <Span.GestureRecognizers>
+                                                    <TapGestureRecognizer Command="{Binding CommandForgotPassword}"/>
+                                                </Span.GestureRecognizers>
+                                            </Span>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+
+                        </Grid>
+                        <!--#endregion-->
+
+                        <Grid Grid.Row="3">
+                            <Button Text="{helper:Translate Main_Page_TextLogin}" 
+                                CornerRadius="15" 
+                                TextColor="White" 
+                                WidthRequest="250" 
+                                HorizontalOptions="Center" 
+                                VerticalOptions="Center"
+                                Command="{Binding CommandLogin}">
+                                <Button.Background>
+                                    <LinearGradientBrush EndPoint="1,0">
+                                        <GradientStop Color="#0080cf" Offset="0.1" />
+                                        <GradientStop Color="#000f6f" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Button.Background>
+                            </Button>
+                        </Grid>
+
+                        <StackLayout Grid.Row="4" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                            <Label Text="{helper:Translate Main_Page_TextVersion}" HorizontalOptions="Center" VerticalOptions="Center" Padding="0" Margin="0,20,0,0"/>
+                            <Label Text="{Binding AppVersion}" HorizontalOptions="Center" VerticalOptions="Center" Padding="0" Margin="0,20,0,0" />
+                        </StackLayout>
+
+                    </Grid>
+
+
+                </VerticalStackLayout>
+                <!--#endregion-->
+
+            </Grid>
+
+
+        </VerticalStackLayout>
+
+        <StackLayout x:Name="AI" IsVisible="{Binding IsBusy}"
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All"
+                BackgroundColor="Gray" Opacity="0.5">
+
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"
+                                   HorizontalOptions="CenterAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                    Color="Black"/>
+
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>

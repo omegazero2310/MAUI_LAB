@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Account_App_Version" xml:space="preserve">
+    <value>Phiên bản</value>
+  </data>
+  <data name="Account_Change_Password" xml:space="preserve">
+    <value>Đổi mật khẩu</value>
+  </data>
+  <data name="Account_Confirm_Logout_Msg" xml:space="preserve">
+    <value>Bạn có muốn đăng xuất khỏi ứng dụng ?</value>
+  </data>
+  <data name="Account_Confirm_Logout_Title" xml:space="preserve">
+    <value>Xác nhận đăng xuất</value>
+  </data>
+  <data name="Account_Logout" xml:space="preserve">
+    <value>Đăng xuất</value>
+  </data>
+  <data name="Account_Rate_App" xml:space="preserve">
+    <value>Đánh giá</value>
+  </data>
+  <data name="Account_Setting" xml:space="preserve">
+    <value>Cài đặt</value>
+  </data>
+  <data name="Account_Staff_Info" xml:space="preserve">
+    <value>Thông tin học viên</value>
+  </data>
+  <data name="Confirm_Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="Confirm_Logout" xml:space="preserve">
+    <value>Đăng xuất</value>
+  </data>
+  <data name="Confirm_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Gender_Female" xml:space="preserve">
+    <value>Nữ</value>
+  </data>
+  <data name="Gender_Male" xml:space="preserve">
+    <value>Nam</value>
+  </data>
+  <data name="Gender_Other" xml:space="preserve">
+    <value>Khác</value>
+  </data>
+  <data name="Label_Address" xml:space="preserve">
+    <value>Địa chỉ</value>
+  </data>
+  <data name="Label_Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="Label_Close" xml:space="preserve">
+    <value>Đóng</value>
+  </data>
+  <data name="Label_Delete" xml:space="preserve">
+    <value>Xóa</value>
+  </data>
+  <data name="Label_Edit" xml:space="preserve">
+    <value>Sửa</value>
+  </data>
+  <data name="Label_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Label_Gender" xml:space="preserve">
+    <value>Giới tính</value>
+  </data>
+  <data name="Label_PhoneNumber" xml:space="preserve">
+    <value>Số điện thoại</value>
+  </data>
+  <data name="Label_Position" xml:space="preserve">
+    <value>Vị trí</value>
+  </data>
+  <data name="Label_Save" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="Label_StaffName" xml:space="preserve">
+    <value>Tên nhân viên</value>
+  </data>
+  <data name="Label_Staff_Add" xml:space="preserve">
+    <value>Thêm nhân viên</value>
+  </data>
+  <data name="Label_Staff_Delete" xml:space="preserve">
+    <value>Xóa nhân viên</value>
+  </data>
+  <data name="Label_Staff_List" xml:space="preserve">
+    <value>Danh sách nhân viên</value>
+  </data>
+  <data name="Label_Staff_Update" xml:space="preserve">
+    <value>Cập nhật nhân viên</value>
+  </data>
+  <data name="Label_Staff_View" xml:space="preserve">
+    <value>Thông tin chi tiết nhân viên</value>
+  </data>
+  <data name="Language_En_US" xml:space="preserve">
+    <value>English - US</value>
+  </data>
+  <data name="Language_Vi_VN" xml:space="preserve">
+    <value>Tiếng Việt</value>
+  </data>
+  <data name="Main_Page_LabelSelectLanguage" xml:space="preserve">
+    <value>Chọn ngôn ngữ</value>
+  </data>
+  <data name="Main_Page_PlaceHolderPassword" xml:space="preserve">
+    <value>Mật khẩu</value>
+  </data>
+  <data name="Main_Page_PlaceHolderUserName" xml:space="preserve">
+    <value>Tên đăng nhập</value>
+  </data>
+  <data name="Main_Page_TextForgotPassword" xml:space="preserve">
+    <value>Quên mật khẩu ?</value>
+  </data>
+  <data name="Main_Page_TextLogin" xml:space="preserve">
+    <value>Đăng nhập</value>
+  </data>
+  <data name="Main_Page_TextRememberPassword" xml:space="preserve">
+    <value>Tự động đăng nhập</value>
+  </data>
+  <data name="Main_Page_TextVersion" xml:space="preserve">
+    <value>Phiên bản</value>
+  </data>
+  <data name="Main_Tabbed_Page_Account" xml:space="preserve">
+    <value>Tài khoản</value>
+  </data>
+  <data name="Main_Tabbed_Page_Bell" xml:space="preserve">
+    <value>Thông báo</value>
+  </data>
+  <data name="Main_Tabbed_Page_Home" xml:space="preserve">
+    <value>Trang chủ</value>
+  </data>
+  <data name="Main_Tabbed_Page_Listing" xml:space="preserve">
+    <value>Danh sách học viên</value>
+  </data>
+  <data name="MSG_ADDRESS_CANNOT_EMPTY" xml:space="preserve">
+    <value>Địa chỉ không được để trống</value>
+  </data>
+  <data name="MSG_ADDRESS_CONTAIN_SPECIALCHARACTERS" xml:space="preserve">
+    <value>Địa chỉ không được chứa kí tự đặc biệt</value>
+  </data>
+  <data name="MSG_CONFIRM_DELETE" xml:space="preserve">
+    <value>Bạn có chắc muốn xóa lái xe {0} - {1} ?</value>
+  </data>
+  <data name="MSG_CONFIRM_DELETE_TITLE" xml:space="preserve">
+    <value>Xác nhận xóa</value>
+  </data>
+  <data name="MSG_DISCONNECTED" xml:space="preserve">
+    <value>Mất kết nối mạng</value>
+  </data>
+  <data name="MSG_EMAIL_NOT_EMPTY" xml:space="preserve">
+    <value>Địa chỉ Email không được để trống</value>
+  </data>
+  <data name="MSG_EMAIL_NOT_VALID" xml:space="preserve">
+    <value>Địa chỉ Email không hợp lệ</value>
+  </data>
+  <data name="MSG_ENTER_PASSWORD" xml:space="preserve">
+    <value>Mật khẩu không được để trống</value>
+  </data>
+  <data name="MSG_ENTER_USER_ID" xml:space="preserve">
+    <value>Tên đăng nhập không được để trống</value>
+  </data>
+  <data name="MSG_GENDER_NOT_VALID" xml:space="preserve">
+    <value>Yêu cầu chọn giới tính hợp lệ</value>
+  </data>
+  <data name="MSG_LOGIN_ERROR" xml:space="preserve">
+    <value>Lỗi đăng nhập</value>
+  </data>
+  <data name="MSG_PHONE_NUMBER_CONTAIN_SPECIALCHARACTERS" xml:space="preserve">
+    <value>Số điện thoại không được chứa kí tự đặc biệt</value>
+  </data>
+  <data name="MSG_PHONE_NUMBER_NOT_EMPTY" xml:space="preserve">
+    <value>Số điện thoại không được để trống</value>
+  </data>
+  <data name="MSG_PHONE_NUMBER_NOT_VALID" xml:space="preserve">
+    <value>Số điện thoại không hợp lệ</value>
+  </data>
+  <data name="MSG_PHONE_NUMBER_NUMBER_ONLY" xml:space="preserve">
+    <value>Số điện thoại không hợp lệ</value>
+  </data>
+  <data name="MSG_POSITION_NOT_VALID" xml:space="preserve">
+    <value>Chọn chức danh hợp lệ</value>
+  </data>
+  <data name="MSG_STAFF_DELETED" xml:space="preserve">
+    <value>Đã xóa nhân viên</value>
+  </data>
+  <data name="MSG_STAFF_DUPLICATE_EMAIL" xml:space="preserve">
+    <value>Địa chỉ email đã tồn tại</value>
+  </data>
+  <data name="MSG_STAFF_PHONE_NUMBER" xml:space="preserve">
+    <value>Số điện thoại đã tồn tại</value>
+  </data>
+  <data name="MSG_USER_EXIST" xml:space="preserve">
+    <value>Đã tồn tại tài khoản</value>
+  </data>
+  <data name="MSG_USER_LOGIN_BANNED" xml:space="preserve">
+    <value>Tài khoản bị ngưng vĩnh viễn</value>
+  </data>
+  <data name="MSG_USER_LOGIN_NOT_EXIST" xml:space="preserve">
+    <value>Không tồn tại tài khoản</value>
+  </data>
+  <data name="MSG_USER_LOGIN_SUPPENDED" xml:space="preserve">
+    <value>Tài khoản bị tạm ngưng</value>
+  </data>
+  <data name="MSG_USER_LOGIN_WRONG_USERNAME_OR_PASSWORD" xml:space="preserve">
+    <value>Sai tên đăng nhập hoặc mật khẩu</value>
+  </data>
+  <data name="MSG_USER_NAME_CONTAIN_SPECIALCHARACTERS" xml:space="preserve">
+    <value>Tên nhân viên không được chứa kí tự đặc biệt</value>
+  </data>
+  <data name="MSG_USER_NAME_NOT_EMPTY" xml:space="preserve">
+    <value>Tên nhân viên không được để trống</value>
+  </data>
+  <data name="MSG_USER_NAME_OVER_CHARACTER" xml:space="preserve">
+    <value>Tên nhân viên vượt quá 50 kí tự</value>
+  </data>
+  <data name="Picker_Select_Gender" xml:space="preserve">
+    <value>Chọn giới tính</value>
+  </data>
+  <data name="Picker_Select_Position" xml:space="preserve">
+    <value>Chọn vị trí</value>
+  </data>
+  <data name="PlaceHolder_Address" xml:space="preserve">
+    <value>Nhập địa chỉ</value>
+  </data>
+  <data name="PlaceHolder_Email" xml:space="preserve">
+    <value>Nhập Email</value>
+  </data>
+  <data name="PlaceHolder_PhoneNumber" xml:space="preserve">
+    <value>Nhập số điện thoại</value>
+  </data>
+  <data name="PlaceHolder_SearchBar" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="PlaceHolder_StaffName" xml:space="preserve">
+    <value>Nhập họ tên</value>
+  </data>
+  <data name="Position_GD" xml:space="preserve">
+    <value>Giám đốc</value>
+  </data>
+  <data name="Position_NV" xml:space="preserve">
+    <value>Nhân viên</value>
+  </data>
+  <data name="Position_TP" xml:space="preserve">
+    <value>Trưởng phòng</value>
+  </data>
+  <data name="Select_Filter_Options" xml:space="preserve">
+    <value>Chọn kiểu lọc</value>
+  </data>
+</root>
