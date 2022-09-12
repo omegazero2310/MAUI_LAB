@@ -105,14 +105,14 @@ namespace MAUI_LAB.ViewModels
                         catch (Exception ex)
                         {
                             Debug.WriteLine(ex);
-                            this.ProfilePicture = ImageSource.FromResource("MobileAppLab.AssetImages.icon_default_profile_pic.png");
+                            this.ProfilePicture = ImageSource.FromFile("icon_default_profile_pic.png");
                         }
                     }
 
                 }
                 else
                 {
-                    this.ProfilePicture = ImageSource.FromResource("MobileAppLab.AssetImages.icon_default_profile_pic.png");
+                    this.ProfilePicture = ImageSource.FromFile("icon_default_profile_pic.png");
                 }
 
             }

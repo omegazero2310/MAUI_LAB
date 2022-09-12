@@ -13,6 +13,7 @@
                     <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
 
+                <!--#region header thông tin tài khoản-->
                 <Frame Grid.Row="0"
                    HasShadow="True"
                    HeightRequest="125"
@@ -29,7 +30,7 @@
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="100"/>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="100"/>
@@ -51,14 +52,15 @@
                                 </mct:AvatarView.GestureRecognizers>
                             </mct:AvatarView>
 
-                            <Grid Grid.Column="1" Padding="0" >
+                            <Grid Grid.Column="1" Padding="0" HorizontalOptions="StartAndExpand">
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
                                 </Grid.RowDefinitions>
 
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="1.4*"/>
-                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="170"/>
                                 </Grid.ColumnDefinitions>
 
                                 <StackLayout Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center">
@@ -77,13 +79,11 @@
                                        TextColor="White"/>
                                 </StackLayout>
 
-                                <StackLayout Grid.Column="1" HorizontalOptions="EndAndExpand" VerticalOptions="Center">
-                                    <Image Grid.Row="0" 
-                                       Grid.Column="1" 
+                                <StackLayout Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center">
+                                    <Image 
                                        Grid.RowSpan="2"
-                                       HorizontalOptions="End"
+                                       HorizontalOptions="EndAndExpand"
                                        VerticalOptions="Center"
-                                       Scale="2.5"
                                        Source="icon_arrow_left_white.png" >
                                         <Image.GestureRecognizers>
                                             <TapGestureRecognizer
@@ -101,12 +101,14 @@
 
                     </StackLayout>
                 </Frame>
-
+                <!--#endregion-->
+                
+                <!--#region Menu tài khoản-->
                 <Frame Grid.Row="1"
                        CornerRadius="10" Margin="0,-20,0,0"
-                       HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
-                    <StackLayout>
-                        <TableView Intent="Settings" Margin="0">
+                        VerticalOptions="Fill">
+
+                    <TableView Intent="Menu" Margin="0" Grid.Row="1" >
                             <TableRoot>
                                 <TableSection>
                                     <ViewCell>
@@ -160,8 +162,9 @@
                                 </TableSection>
                             </TableRoot>
                         </TableView>
-                    </StackLayout>
+                    
                 </Frame>
+                <!--#endregion-->
             </Grid>
 
         </StackLayout>

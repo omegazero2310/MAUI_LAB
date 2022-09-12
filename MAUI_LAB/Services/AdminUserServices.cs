@@ -1,6 +1,7 @@
 ﻿using MAUI_LAB.Entities.Request;
 using MAUI_LAB.Entities.Respone;
 using MAUI_LAB.Services.Interface;
+using Microsoft.Maui.Controls;
 using MonkeyCache.FileStore;
 using Newtonsoft.Json;
 using System.Diagnostics;
@@ -149,13 +150,6 @@ namespace MAUI_LAB.Services
                 {
                     return Barrel.Current.Get<AdminUser>(key: this.BaseUrl + $"/Get/{key}");
                 }
-
-                var asm = this.GetType().Assembly;
-                //ảnh mặc định
-                System.IO.Stream stream = asm.GetManifestResourceStream("MobileAppLab.AssetImages.icon_default_profile_pic.png");
-                byte[] data = new byte[stream.Length];
-                stream.Read(data, 0, (int)stream.Length);
-
                 HttpRequestMessage message = new HttpRequestMessage(HttpMethod.Get, this.BaseUrl + $"/Get?userName={key}");
                 //Get Token from SecureStorage
                 message.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
@@ -171,7 +165,7 @@ namespace MAUI_LAB.Services
                 }
                 else
                 {
-                    user.ProfileImg = data;
+                    user.ProfileImg = new byte[0];
                 }
 
                 Barrel.Current.Add(key: this.BaseUrl + $"/Get/{key}", data: user, expireIn: TimeSpan.FromDays(1));
