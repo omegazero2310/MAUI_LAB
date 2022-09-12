@@ -7,6 +7,8 @@
 
         public bool Check(string value)
         {
+            if (string.IsNullOrEmpty(value))
+                return true;//không check chuỗi null hoặc trắng
             if (value.ToCharArray().Any(ch => SPECIALCHARACTERS.ToCharArray().Contains(ch)))
             {
                 this.ValidationMessage = "MSG_USER_NAME_CONTAIN_SPECIALCHARACTERS";

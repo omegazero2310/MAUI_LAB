@@ -15,7 +15,7 @@
                  AbsoluteLayout.LayoutFlags="All" >
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="1.2*"/>
+                    <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <!--#region ảnh đăng nhập-->
@@ -26,7 +26,7 @@
                    HorizontalOptions="FillAndExpand"
                    VerticalOptions="FillAndExpand"
                    CornerRadius="10" Margin="0" >
-                    <Image Source="loginpicture.png" Aspect="AspectFill"></Image>
+                    <Image Source="loginpicture.png" Aspect="AspectFit"></Image>
                 </Frame>
                 <Frame Grid.Row="0" 
                    CornerRadius="5" 
@@ -53,14 +53,14 @@
                 <!--#endregion-->
 
                 <!--#region Phần các control-->
-                <StackLayout Grid.Row="1" Padding="0,50,0,0" >
+                <StackLayout Grid.Row="1" Padding="0" >
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="50"/>
-                            <RowDefinition Height="50"/>
-                            <RowDefinition Height="50"/>
-                            <RowDefinition Height="50"/>
-                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
                         <!--#region trường tên đăng nhập-->
                         <Grid Padding="25,0" Grid.Row="0">

@@ -2,7 +2,7 @@ using Mopups.Pages;
 
 namespace MAUI_LAB.Views;
 
-public partial class StaffEditPopupPage : PopupPage
+public partial class StaffEditPopupPage : ContentPage
 {
 	public StaffEditPopupPage()
 	{

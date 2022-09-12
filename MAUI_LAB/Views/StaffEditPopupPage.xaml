@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:Mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
              xmlns:helper="clr-namespace:MAUI_LAB.Helper"
              x:Class="MAUI_LAB.Views.StaffEditPopupPage">
-    <StackLayout Margin="15,50,15,30" Padding="0">
-        <StackLayout>
-            <!--#region Khung trắng của popup-->
-            <Frame Padding="0" CornerRadius="20">
-                <StackLayout Padding="0" BackgroundColor="White">
-                    <!--#region Khung tiêu đề-->
-                    <Frame
+    <StackLayout>
+        <!--#region Khung trắng của popup-->
+        <Frame Padding="0" CornerRadius="20" BorderColor="Black">
+            <StackLayout Padding="0" BackgroundColor="White">
+                <!--#region Khung tiêu đề-->
+                <Frame
                             Grid.Row="0"
                             Margin="0,0,0,0"
                             Padding="0"
@@ -18,14 +16,14 @@
                             HeightRequest="50"
                             HorizontalOptions="FillAndExpand"
                             VerticalOptions="FillAndExpand">
-                        <Frame.Background>
-                            <LinearGradientBrush>
-                                <GradientStop Offset="0.1" Color="#72c3f6" />
-                                <GradientStop Offset="1.0" Color="#000d6a" />
-                            </LinearGradientBrush>
-                        </Frame.Background>
-                        <StackLayout Margin="0,10,0,0" Orientation="Vertical">
-                            <Label
+                    <Frame.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Offset="0.1" Color="#72c3f6" />
+                            <GradientStop Offset="1.0" Color="#000d6a" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    <StackLayout Margin="0,10,0,0" Orientation="Vertical">
+                        <Label
                                     Grid.Column="1"
                                     FontAttributes="Bold"
                                     FontSize="Medium"
@@ -33,13 +31,28 @@
                                     Text="{Binding Title}"
                                     TextColor="White"
                                     VerticalOptions="Center" />
-                        </StackLayout>
-                    </Frame>
-                    <!--#region-->
+                    </StackLayout>
+                </Frame>
+                <!--#region-->
 
-                    <!--#region Khung các trường nhập liệu-->
-                    <StackLayout Grid.Row="1" Padding="10">
+                <!--#region Khung các trường nhập liệu-->
+                <StackLayout Grid.Row="1" Padding="10">
+                    <ScrollView>
                         <Grid Padding="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="2*" />
@@ -278,20 +291,22 @@
                                     TextColor="#FF0000"
                                     VerticalOptions="StartAndExpand" />
                         </Grid>
-                    </StackLayout>
-                    <!--#endregion-->
+                    </ScrollView>
+                    
+                </StackLayout>
+                <!--#endregion-->
 
-                    <!--#region khung các nút điều khiển-->
-                    <StackLayout
+                <!--#region khung các nút điều khiển-->
+                <StackLayout
                             Padding="0,0,0,10"
                             IsVisible="{Binding IsEditMode}"
                             Orientation="Horizontal">
-                        <Grid HorizontalOptions="Center" VerticalOptions="Center">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <Button
+                    <Grid HorizontalOptions="Center" VerticalOptions="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button
                                     Grid.Column="0"
                                     BackgroundColor="White"
                                     BorderColor="Black"
@@ -300,9 +315,10 @@
                                     CornerRadius="15"
                                     HorizontalOptions="Center"
                                     Text="{helper:Translate Confirm_Cancel}"
+                                    TextColor="Black"
                                     VerticalOptions="Center"
                                     WidthRequest="100" />
-                            <Button
+                        <Button
                                     Grid.Column="1"
                                     Command="{Binding CommandSave}"
                                     CornerRadius="15"
@@ -311,19 +327,18 @@
                                     TextColor="White"
                                     VerticalOptions="Center"
                                     WidthRequest="100">
-                                <Button.Background>
-                                    <LinearGradientBrush EndPoint="1,1">
-                                        <GradientStop Offset="0.1" Color="#0080cf" />
-                                        <GradientStop Offset="1.0" Color="#000f6f" />
-                                    </LinearGradientBrush>
-                                </Button.Background>
-                            </Button>
-                        </Grid>
-                    </StackLayout>
-                    <!--#endregion-->
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="1,1">
+                                    <GradientStop Offset="0.1" Color="#0080cf" />
+                                    <GradientStop Offset="1.0" Color="#000f6f" />
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </Grid>
                 </StackLayout>
-            </Frame>
-            <!--#endregion-->
-        </StackLayout>
+                <!--#endregion-->
+            </StackLayout>
+        </Frame>
+        <!--#endregion-->
     </StackLayout>
-</Mopups:PopupPage>
+</ContentPage>

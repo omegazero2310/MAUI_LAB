@@ -30,7 +30,6 @@
                 <StackLayout Margin="0,10,0,0" Orientation="Horizontal">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.1*" />
                             <ColumnDefinition Width="2*" />
                             <ColumnDefinition Width="0.1*" />
                         </Grid.ColumnDefinitions>
@@ -38,7 +37,7 @@
                             <RowDefinition Height="50" />
                         </Grid.RowDefinitions>
                         <Label
-                                Grid.Column="1"
+                                Grid.Column="0"
                                 FontAttributes="Bold"
                                 FontSize="Medium"
                                 HorizontalOptions="CenterAndExpand"
@@ -46,7 +45,7 @@
                                 TextColor="White"
                                 VerticalOptions="CenterAndExpand" />
                         <Image
-                                Grid.Column="2"
+                                Grid.Column="1"
                                 HorizontalOptions="End"
                                 Source="icon_add48.png"
                                 VerticalOptions="Center">

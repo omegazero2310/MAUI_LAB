@@ -65,7 +65,7 @@ public static class PlatformInitializer
         containerRegistry.RegisterForNavigation<HomePage, HomeViewModel>();
         containerRegistry.RegisterForNavigation<StaffListingPage, StaffListingViewModel>();
         containerRegistry.RegisterForNavigation<StaffDetailInfoPage, StaffInfoDetailViewModel>();
-        containerRegistry.RegisterForNavigation<StaffEditPopupPage, StaffEditPopupPage>();
+        containerRegistry.RegisterForNavigation<StaffEditPopupPage, StaffEditViewModel>();
         containerRegistry.RegisterForNavigation<UserNotificationPage, UserNotificationViewModel>();
         containerRegistry.RegisterForNavigation<UserAccountPage, UserAccountViewModel>();
     }

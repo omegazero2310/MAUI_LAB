@@ -229,7 +229,7 @@ namespace MAUI_LAB.ViewModels
 
             this.Gender.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = AppResource.MSG_GENDER_NOT_VALID });
 
-            this.EmailAddress.Validations.Add(new IsValidEmailRule<string> { ValidationMessage = AppResource.MSG_GENDER_NOT_VALID });
+            this.EmailAddress.Validations.Add(new IsValidEmailRule<string> { ValidationMessage = AppResource.MSG_EMAIL_NOT_VALID });
         }
 
         #region override method
@@ -313,7 +313,7 @@ namespace MAUI_LAB.ViewModels
                 if (!this.Gender.IsValid)
                     this.ErrorMessages.Add("GENDER", this.Gender.Errors.FirstOrDefault());
                 if (!this.EmailAddress.IsValid)
-                    this.ErrorMessages.Add("EmailAddress", this.EmailAddress.Errors.FirstOrDefault());
+                    this.ErrorMessages.Add("Email", this.EmailAddress.Errors.FirstOrDefault());
 
                 if (this.ErrorMessages.Count > 0)
                 {
