@@ -16,7 +16,7 @@ namespace MAUI_LAB.ViewModels
         #endregion
 
         #region Thuộc tính binding với View
-        private ImageSource _profilePicture = ImageSource.FromResource("MobileAppLab.AssetImages.icon_default_profile_pic.png");
+        private ImageSource _profilePicture = ImageSource.FromFile("icon_default_profile_pic.png");
         public ImageSource ProfilePicture
         {
             get { return _profilePicture; }
