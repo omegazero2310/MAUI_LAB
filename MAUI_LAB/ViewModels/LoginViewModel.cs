@@ -1,6 +1,7 @@
 ﻿using MAUI_LAB.Helper;
 using MAUI_LAB.Properties;
 using MAUI_LAB.Services.Interface;
+using Prism.Navigation.Builder;
 
 namespace MAUI_LAB.ViewModels
 {
@@ -214,8 +215,11 @@ namespace MAUI_LAB.ViewModels
                         Preferences.Set("REMEMBER_LOGIN", IsSaveLoginInfo);
 
                     }
-                    //chuyển sang trang chủ
-                    await this.NavigationService.NavigateAsync("/MainTabbedPage");
+                    //lấy khung config tabbed page từ page MainTabbedPage, gọi prism để tự thêm các page vào code
+                    this.NavigationService.CreateBuilder()
+                        .AddTabbedSegment("MainTabbedPage", builder=> this.InitTabbedPage(builder)).Navigate();
+
+                    //await this.NavigationService.NavigateAsync("/MainTabbedPage");
                 }
                 else
                 {
@@ -233,6 +237,13 @@ namespace MAUI_LAB.ViewModels
             }
 
         }
+        private void InitTabbedPage(ITabbedSegmentBuilder tabbedSegmentBuilder)
+        {
+            tabbedSegmentBuilder.CreateTab("HomePage");
+            tabbedSegmentBuilder.CreateTab("StaffListingPage");
+            tabbedSegmentBuilder.CreateTab("UserNotificationPage");
+            tabbedSegmentBuilder.CreateTab("UserAccountPage");
+        }    
         private async void ExecuteCommandForgotPassword()
         {
             IActionSheetButton selectCallAction = ActionSheetButton.CreateButton("Call", async () => await DialCallSupport());

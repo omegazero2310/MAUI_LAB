@@ -4,20 +4,21 @@
              xmlns:helper="clr-namespace:MAUI_LAB.Helper"
              xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="MAUI_LAB.Views.UserAccountPage"
-             Title="UserAccountPage">
+             Title="{helper:Translate Main_Tabbed_Page_Account}" IconImageSource="icon_account.png">
     <ContentPage.Content>
         <StackLayout>
-            <Grid>
+            <Grid HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Padding="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1.4*"/>
-                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
 
                 <Frame Grid.Row="0"
                    HasShadow="True"
                    HeightRequest="125"
                    HorizontalOptions="FillAndExpand"
-                   VerticalOptions="FillAndExpand">
+                   VerticalOptions="FillAndExpand"
+                   Padding="0">
                     <Frame.Background>
                         <LinearGradientBrush>
                             <GradientStop Color="#72c3f6" Offset="0.1" />
@@ -102,50 +103,50 @@
                 </Frame>
 
                 <Frame Grid.Row="1"
-                       CornerRadius="10" Margin="0,-25,0,0"
-                       >
+                       CornerRadius="10" Margin="0,-20,0,0"
+                       HorizontalOptions="FillAndExpand" VerticalOptions="Fill">
                     <StackLayout>
                         <TableView Intent="Settings" Margin="0">
                             <TableRoot>
                                 <TableSection>
                                     <ViewCell>
                                         <StackLayout Orientation="Horizontal">
-                                            <Image Grid.Column="0" Source="icon_account.png" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="40" Aspect="AspectFit"/>
+                                            <Image Grid.Column="0" Source="icon_account.png" HorizontalOptions="Start" Scale="0.5" VerticalOptions="Center" WidthRequest="40" Aspect="AspectFit"/>
                                             <Label Grid.Column="1" Text="{helper:Translate Account_Staff_Info}" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center"/>
                                             <Image Grid.Column="2" Source="icon_arrow_left_black.png" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
                                         </StackLayout>
                                     </ViewCell>
                                     <ViewCell>
                                         <StackLayout Orientation="Horizontal">
-                                            <Image Grid.Column="0" Source="icon_key.png" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="40" Aspect="AspectFit"/>
+                                            <Image Grid.Column="0" Source="icon_key.png" HorizontalOptions="Start" Scale="0.5" VerticalOptions="Center" WidthRequest="40" Aspect="AspectFit"/>
                                             <Label Grid.Column="1" Text="{helper:Translate Account_Change_Password}" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center"/>
                                             <Image Grid.Column="2" Source="icon_arrow_left_black.png" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
                                         </StackLayout>
                                     </ViewCell>
                                     <ViewCell>
                                         <StackLayout Orientation="Horizontal">
-                                            <Image Grid.Column="0" Source="icon_star.png" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="40" Aspect="AspectFit"/>
+                                            <Image Grid.Column="0" Source="icon_star.png" HorizontalOptions="Start" Scale="0.5" VerticalOptions="Center" WidthRequest="40" Aspect="AspectFit"/>
                                             <Label Grid.Column="1" Text="{helper:Translate Account_Rate_App}" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center"/>
                                             <Image Grid.Column="2" Source="icon_arrow_left_black.png" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
                                         </StackLayout>
                                     </ViewCell>
                                     <ViewCell>
                                         <StackLayout Orientation="Horizontal">
-                                            <Image Grid.Column="0" Source="icon_gear.png" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="40" Aspect="AspectFit"/>
+                                            <Image Grid.Column="0" Source="icon_gear.png" HorizontalOptions="Start" Scale="0.5" VerticalOptions="Center" WidthRequest="40" Aspect="AspectFit"/>
                                             <Label Grid.Column="1" Text="{helper:Translate Account_Setting}" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center"/>
                                             <Image Grid.Column="2" Source="icon_arrow_left_black.png" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
                                         </StackLayout>
                                     </ViewCell>
                                     <ViewCell>
                                         <StackLayout Orientation="Horizontal">
-                                            <Image Grid.Column="0" Source="icon_info.png" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="40" Aspect="AspectFit"/>
+                                            <Image Grid.Column="0" Source="icon_info.png" HorizontalOptions="Start" Scale="0.5" VerticalOptions="Center" WidthRequest="40" Aspect="AspectFit"/>
                                             <Label Grid.Column="1" Text="{helper:Translate Account_App_Version}" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center"/>
                                             <Image Grid.Column="2" Source="icon_arrow_left_black.png" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
                                         </StackLayout>
                                     </ViewCell>
                                     <ViewCell>
                                         <StackLayout Orientation="Horizontal">
-                                            <Image Grid.Column="0" Source="icon_logout.png" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="40" Aspect="AspectFit"/>
+                                            <Image Grid.Column="0" Source="icon_logout.png" HorizontalOptions="Start" Scale="0.5" VerticalOptions="Center" WidthRequest="40" Aspect="AspectFit"/>
                                             <Label Grid.Column="1" Text="{helper:Translate Account_Logout}" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center"/>
                                             <Image Grid.Column="2" Source="icon_arrow_left_black.png" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
                                             <StackLayout.GestureRecognizers>

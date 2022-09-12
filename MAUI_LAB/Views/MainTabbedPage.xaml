@@ -13,10 +13,5 @@
             NavigationPage.HasNavigationBar="False"
             NavigationPage.HasBackButton="False"
             >
-    <TabbedPage.Children>
-        <views:HomePage Title="{helper:Translate Main_Tabbed_Page_Home}" IconImageSource="icon_home.png"/>
-        <views:StaffListingPage Title="{helper:Translate Main_Tabbed_Page_Listing}" IconImageSource="icon_listing.png"/>
-        <views:UserNotificationPage Title="{helper:Translate Main_Tabbed_Page_Bell}" IconImageSource="icon_notification.png"/>
-        <views:UserAccountPage Title="{helper:Translate Main_Tabbed_Page_Account}" IconImageSource="icon_account.png"/>
-    </TabbedPage.Children>
+    <!--Chỉ là khung config: đặt Toolbar ở dưới, còn code thêm các tab ở phần LoginViewModel-->
 </TabbedPage>

@@ -3,6 +3,7 @@ using MAUI_LAB.Services;
 using MAUI_LAB.Services.Interface;
 using MAUI_LAB.ViewModels;
 using MAUI_LAB.Views;
+using Mopups.Hosting;
 
 namespace MAUI_LAB;
 
@@ -34,7 +35,8 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 fonts.AddFont("MaterialIcons-Regular.ttf", "MaterialIcons");
-            });
+            })
+            .ConfigureMopups();
 
 		return builder.Build();
 	}
@@ -64,7 +66,7 @@ public static class PlatformInitializer
     }	
 	public static async void OnAppStart(INavigationService navigationService)
 	{
-		navigationService.CreateBuilder()
+        navigationService.CreateBuilder()
 					.AddSegment<LoginViewModel>()
 					.Navigate(HandleNavigationError);
 	}
