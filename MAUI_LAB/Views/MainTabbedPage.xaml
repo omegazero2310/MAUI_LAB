@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+             xmlns:views="clr-namespace:MAUI_LAB.Views"
+            xmlns:helper="clr-namespace:MAUI_LAB.Helper"
+             x:Class="MAUI_LAB.Views.MainTabbedPage"
+             Title="MainTabbedPage"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            UnselectedTabColor="Black"
+            SelectedTabColor="Blue"
+            android:TabbedPage.IsSwipePagingEnabled="False"
+            NavigationPage.HasNavigationBar="False"
+            NavigationPage.HasBackButton="False"
+            >
+    <TabbedPage.Children>
+        <views:HomePage Title="{helper:Translate Main_Tabbed_Page_Home}" IconImageSource="icon_home.png"/>
+        <views:StaffListingPage Title="{helper:Translate Main_Tabbed_Page_Listing}" IconImageSource="icon_listing.png"/>
+        <views:UserNotificationPage Title="{helper:Translate Main_Tabbed_Page_Bell}" IconImageSource="icon_notification.png"/>
+        <views:UserAccountPage Title="{helper:Translate Main_Tabbed_Page_Account}" IconImageSource="icon_account.png"/>
+    </TabbedPage.Children>
+</TabbedPage>

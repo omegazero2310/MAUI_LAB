@@ -50,6 +50,13 @@ public static class PlatformInitializer
 		containerRegistry.Register<IAdminUserServices, AdminUserServices>();
 
 		containerRegistry.RegisterForNavigation<LoginPage, LoginViewModel>();
+        containerRegistry.RegisterForNavigation<MainTabbedPage, MainTabbedViewModel>();
+        containerRegistry.RegisterForNavigation<HomePage, HomeViewModel>();
+        containerRegistry.RegisterForNavigation<StaffListingPage, StaffListingViewModel>();
+        containerRegistry.RegisterForNavigation<StaffDetailInfoPage, StaffInfoDetailViewModel>();
+        containerRegistry.RegisterForNavigation<StaffEditPopupPage, StaffEditPopupPage>();
+        containerRegistry.RegisterForNavigation<UserNotificationPage, UserNotificationViewModel>();
+        containerRegistry.RegisterForNavigation<UserAccountPage, UserAccountViewModel>();
     }
 	public static async void OnInit()
 	{

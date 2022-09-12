@@ -50,6 +50,23 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\MaterialIcons-Regular.ttf" />
+	  <None Remove="Resources\Images\icon_account.png" />
+	  <None Remove="Resources\Images\icon_add48.png" />
+	  <None Remove="Resources\Images\icon_arrow_left_black.png" />
+	  <None Remove="Resources\Images\icon_arrow_left_white.png" />
+	  <None Remove="Resources\Images\icon_default_profile_pic.png" />
+	  <None Remove="Resources\Images\icon_delete48.png" />
+	  <None Remove="Resources\Images\icon_edit48.png" />
+	  <None Remove="Resources\Images\icon_gear.png" />
+	  <None Remove="Resources\Images\icon_home.png" />
+	  <None Remove="Resources\Images\icon_info.png" />
+	  <None Remove="Resources\Images\icon_key.png" />
+	  <None Remove="Resources\Images\icon_listing.png" />
+	  <None Remove="Resources\Images\icon_logout.png" />
+	  <None Remove="Resources\Images\icon_more_vert48.png" />
+	  <None Remove="Resources\Images\icon_notification.png" />
+	  <None Remove="Resources\Images\icon_search_blue.png" />
+	  <None Remove="Resources\Images\icon_star.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -70,6 +87,30 @@
 	  <PackageReference Include="DevExpress.Maui.Editors">
 	    <Version>22.1.5</Version>
 	  </PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\MainTabbedPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\StaffDetailInfoPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\StaffEditPopupPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\StaffListingPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\UserAccountPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\UserNotificationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>
