@@ -1,5 +1,4 @@
 ﻿using CommunityToolkit.Maui;
-using DevExpress.Maui;
 using MAUI_LAB.Services;
 using MAUI_LAB.Services.Interface;
 using MAUI_LAB.ViewModels;
@@ -14,7 +13,6 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
-			.UseDevExpress()
 			.UsePrism(prism => {
 				// Register Services and setup initial Navigation
 				prism.RegisterTypes(container =>
@@ -59,6 +57,13 @@ public static class PlatformInitializer
     }	
 	public static async void OnAppStart(INavigationService navigationService)
 	{
-		//navigationService.CreateBuilder().AddSegment<LoginViewModel>().Navigate();
-	}	
+		navigationService.CreateBuilder()
+					.AddSegment<LoginViewModel>()
+					.Navigate(HandleNavigationError);
+	}
+    private static void HandleNavigationError(Exception ex)
+    {
+        Console.WriteLine(ex);
+        System.Diagnostics.Debugger.Break();
+    }
 }

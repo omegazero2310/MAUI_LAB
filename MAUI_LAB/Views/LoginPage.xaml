@@ -6,26 +6,25 @@
              xmlns:trg="clr-namespace:MAUI_LAB.Helper.Trigger"
              xmlns:behaviors="clr-namespace:MAUI_LAB.Helper.Behaviors"
              xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
              x:Class="MAUI_LAB.Views.LoginPage"
              Title="LoginPage">
 
 
     <AbsoluteLayout>
-        <VerticalStackLayout x:Name="Main"  AbsoluteLayout.LayoutBounds="0,0,1,1"
+        <StackLayout x:Name="Main" AbsoluteLayout.LayoutBounds="0,0,1,1"
                  AbsoluteLayout.LayoutFlags="All" >
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1.2*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <!--#region ảnh đăng nhập-->
 
                 <Frame Grid.Row="0"
                    Padding="0"
                    HasShadow="True"
-                   HorizontalOptions="Fill"
-                   VerticalOptions="Fill"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
                    CornerRadius="10" Margin="0" >
                     <Image Source="loginpicture.png" Aspect="AspectFill"></Image>
                 </Frame>
@@ -54,7 +53,7 @@
                 <!--#endregion-->
 
                 <!--#region Phần các control-->
-                <VerticalStackLayout Grid.Row="1" Padding="0,50,0,0" >
+                <StackLayout Grid.Row="1" Padding="0,50,0,0" >
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="50"/>
@@ -64,11 +63,19 @@
                             <RowDefinition Height="50"/>
                         </Grid.RowDefinitions>
                         <!--#region trường tên đăng nhập-->
-                        <dxe:TextEdit Grid.Row="0" PlaceholderText="User Name" StartIcon="person48.png">
-                            <dxe:TextEdit.Behaviors>
-                                <behaviors:SpecialCharactersValidationBehavior />
-                            </dxe:TextEdit.Behaviors>
-                        </dxe:TextEdit>
+                        <Grid Padding="25,0" Grid.Row="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="20*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="person48.png" HorizontalOptions="StartAndExpand" Scale="1.5"/>
+                            <Entry Grid.Column="1" Placeholder="{helper:Translate Main_Page_PlaceHolderUserName}" Text="{Binding UserName}" ReturnType="Next" MaxLength="50" HorizontalOptions="StartAndExpand">
+                                <Entry.Behaviors>
+                                    <behaviors:SpecialCharactersValidationBehavior />
+                                </Entry.Behaviors>
+                            </Entry>
+
+                        </Grid>
                         <!--#endregion-->
 
                         <!--#region trường mật khẩu-->
@@ -78,9 +85,9 @@
                                 <ColumnDefinition Width="20*"/>
                             </Grid.ColumnDefinitions>
 
-                        <ImageButton Grid.Column="0" Source="lock48.png" HorizontalOptions="Center" Aspect="AspectFit"  VerticalOptions="CenterAndExpand"/>
+                            <Image Grid.Column="0" Source="lock48.png" HorizontalOptions="StartAndExpand" Scale="1.5"/>
                             <Entry Grid.Column="1" Placeholder="{helper:Translate Main_Page_PlaceHolderPassword}" Text="{Binding Password}" ReturnType="Done"
-                                IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}" MaxLength="50">
+                                IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}" MaxLength="50" HorizontalOptions="StartAndExpand">
                                 <Entry.Behaviors>
                                     <behaviors:SpecialCharactersValidationBehavior />
                                 </Entry.Behaviors>
@@ -88,7 +95,7 @@
                             <ImageButton Grid.Column="1" VerticalOptions="Center"
                                 HeightRequest="20"
                                 HorizontalOptions="End"
-                                Source="visibility48.png">
+                                Source="visibility48.png" Scale="1.5">
                                 <ImageButton.Triggers>
                                     <EventTrigger Event="Clicked">
                                         <trg:ShowPasswordTriggerAction ShowIcon="visibility48.png"
@@ -155,13 +162,13 @@
                     </Grid>
 
 
-                </VerticalStackLayout>
+                </StackLayout>
                 <!--#endregion-->
 
             </Grid>
 
 
-        </VerticalStackLayout>
+        </StackLayout>
 
         <StackLayout x:Name="AI" IsVisible="{Binding IsBusy}"
                 AbsoluteLayout.LayoutBounds="0,0,1,1"
