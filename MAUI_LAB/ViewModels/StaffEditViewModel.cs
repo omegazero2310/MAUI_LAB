@@ -294,7 +294,7 @@ namespace MAUI_LAB.ViewModels
             try
             {
                 this.ErrorMessages = new Dictionary<string, string>();
-
+                this.PositionName.Value = this.SelectedStaffPosition.PartName;
                 this.UserName.Validate();
                 this.Address.Validate();
                 this.PositionName.Validate();

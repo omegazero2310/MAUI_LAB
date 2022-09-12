@@ -77,7 +77,7 @@
                                     MaxLength="50"
                                     Placeholder="{helper:Translate PlaceHolder_StaffName}"
                                     ReturnType="Next"
-                                    Text="{Binding UserName}"
+                                    Text="{Binding UserName.Value}"
                                     VerticalOptions="CenterAndExpand">
                                 <!--<Entry.Behaviors>
                                         <behaviors:SpecialCharactersValidationBehavior />
@@ -112,7 +112,7 @@
                                     IsEnabled="{Binding IsEditMode}"
                                     Placeholder="{helper:Translate PlaceHolder_Address}"
                                     ReturnType="Next"
-                                    Text="{Binding Address}"
+                                    Text="{Binding Address.Value}"
                                     VerticalOptions="CenterAndExpand">
                                 <!--<Entry.Behaviors>
                                         <behaviors:SpecialCharactersValidationBehavior />
@@ -148,7 +148,7 @@
                                     Keyboard="Numeric"
                                     Placeholder="{helper:Translate PlaceHolder_PhoneNumber}"
                                     ReturnType="Next"
-                                    Text="{Binding PhoneNumber}"
+                                    Text="{Binding PhoneNumber.Value}"
                                     VerticalOptions="CenterAndExpand">
                                 <!--<Entry.Behaviors>
                                         <behaviors:SpecialCharactersValidationBehavior />
@@ -232,7 +232,7 @@
                                     IsEnabled="{Binding IsEditMode}"
                                     Placeholder="{helper:Translate PlaceHolder_Email}"
                                     ReturnType="Next"
-                                    Text="{Binding EmailAddress}"
+                                    Text="{Binding EmailAddress.Value}"
                                     VerticalOptions="CenterAndExpand" />
                             <Label
                                     Grid.Row="9"
@@ -264,7 +264,7 @@
                                     HorizontalOptions="Fill"
                                     IsEnabled="{Binding IsEditMode}"
                                     ItemsSource="{Binding StaffGenders}"
-                                    SelectedItem="{Binding Gender}"
+                                    SelectedItem="{Binding Gender.Value}"
                                     VerticalOptions="CenterAndExpand" />
                             <ImageButton Grid.Row="10"
                                     Grid.Column="1" VerticalOptions="Center"
