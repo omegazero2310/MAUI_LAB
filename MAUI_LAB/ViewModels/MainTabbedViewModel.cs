@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace MAUI_LAB.ViewModels
 {
-    public class MainTabbedViewModel
+    public class MainTabbedViewModel : ViewModelBase
     {
+        public MainTabbedViewModel(INavigationService navigationService) : base(navigationService)
+        {
+        }
     }
 }

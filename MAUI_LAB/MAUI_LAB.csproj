@@ -70,7 +70,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Helper\" />
 	  <Folder Include="ImageResource\" />
 	  <Folder Include="ViewModels\" />
 	</ItemGroup>
