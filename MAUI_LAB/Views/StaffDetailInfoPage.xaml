@@ -1,12 +1,207 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:helper="clr-namespace:MAUI_LAB.Helper"
              x:Class="MAUI_LAB.Views.StaffDetailInfoPage"
              Title="StaffDetailInfoPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <StackLayout>
+        <!--#region Khung trắng của popup-->
+        <Frame Padding="0" CornerRadius="20">
+            <StackLayout Padding="0" BackgroundColor="White">
+                <!--#region Khung tiêu đề-->
+                <Frame
+                            Grid.Row="0"
+                            Margin="0,0,0,0"
+                            Padding="0"
+                            HasShadow="True"
+                            HeightRequest="50"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+                    <Frame.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Offset="0.1" Color="#72c3f6" />
+                            <GradientStop Offset="1.0" Color="#000d6a" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    <StackLayout Margin="0,10,0,0" Orientation="Vertical">
+                        <Label
+                                    Grid.Column="1"
+                                    FontAttributes="Bold"
+                                    FontSize="Medium"
+                                    HorizontalOptions="Center"
+                                    Text="{Binding Title}"
+                                    TextColor="White"
+                                    VerticalOptions="Center" />
+                    </StackLayout>
+                </Frame>
+                <!--#region-->
+
+                <!--#region Khung các trường nhập liệu-->
+                <StackLayout Grid.Row="1" Padding="10">
+                    <Grid Padding="0" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{helper:Translate Label_StaffName}" FontAttributes="Bold"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding UserName}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Label
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{helper:Translate Label_Address}" FontAttributes="Bold" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding Address}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Label
+                                    Grid.Row="2"
+                                    Grid.Column="0"
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{helper:Translate Label_PhoneNumber}" FontAttributes="Bold" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding PhoneNumber}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Label
+                                    Grid.Row="3"
+                                    Grid.Column="0"
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{helper:Translate Label_Position}" FontAttributes="Bold" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label
+                                    Grid.Row="3"
+                                    Grid.Column="1"
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding PositionName}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Label
+                                    Grid.Row="4"
+                                    Grid.Column="0"
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{helper:Translate Label_Email}" FontAttributes="Bold" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label
+                                    Grid.Row="4"
+                                    Grid.Column="1"
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding EmailAddress}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Label
+                                    Grid.Row="5"
+                                    Grid.Column="0"
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{helper:Translate Label_Gender}" FontAttributes="Bold" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Label
+                                    Grid.Row="5"
+                                    Grid.Column="1"
+                                    HorizontalOptions="StartAndExpand"
+                                    VerticalOptions="Center">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding Gender}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Grid>
+                </StackLayout>
+                <!--#endregion-->
+
+                <!--#region khung các nút điều khiển-->
+                <StackLayout
+                            Padding="0,0,0,10"
+                            Orientation="Horizontal">
+                    <Button BackgroundColor="White"
+                            TextColor="Black"
+                                    BorderColor="Black"
+                                    BorderWidth="1"
+                                    Command="{Binding CommandCancel}"
+                                    CornerRadius="15"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Text="{helper:Translate Label_Close}"
+                                    VerticalOptions="CenterAndExpand"
+                                    WidthRequest="100" />
+                </StackLayout>
+                <!--#endregion-->
+            </StackLayout>
+        </Frame>
+        <!--#endregion-->
+    </StackLayout>
 </ContentPage>

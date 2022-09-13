@@ -237,7 +237,8 @@ namespace MAUI_LAB.ViewModels
             this.PositionName = new ValidatableObject<string> { Value = adminStaff.PositionName };
             this.PhoneNumber = new ValidatableObject<string> { Value = adminStaff.PhoneNumber };
             this.Gender = new ValidatableObject<string> { Value = _staffGenders.Where(pos => pos.Value == adminStaff.Gender).FirstOrDefault().Key };
-            this.EmailAddress = new ValidatableObject<string> { Value = adminStaff.StaffName };
+            this.EmailAddress = new ValidatableObject<string> { Value = adminStaff.Email };
+            this.SelectedStaffPosition = this.StaffPositions.Where(part => part.PartID == adminStaff.PartID).FirstOrDefault();
 
             this.UserName.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = AppResource.MSG_USER_NAME_NOT_EMPTY });
             this.UserName.Validations.Add(new IsLenghtValidRule<string> { MaximunLenght = 50, ValidationMessage = AppResource.MSG_USER_NAME_OVER_CHARACTER });

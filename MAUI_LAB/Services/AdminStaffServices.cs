@@ -171,11 +171,6 @@ namespace MAUI_LAB.Services
                     return Barrel.Current.Get<AdminStaff>(key: this.BaseUrl + $"/Get/{key}");
                 }
 
-                var asm = this.GetType().Assembly;
-                //ảnh mặc định
-                System.IO.Stream stream = asm.GetManifestResourceStream("MobileAppLab.AssetImages.icon_default_profile_pic.png");
-                byte[] data = new byte[stream.Length];
-                stream.Read(data, 0, (int)stream.Length);
 
                 HttpRequestMessage message = new HttpRequestMessage(HttpMethod.Get, this.BaseUrl + $"/Get?id={key}");
                 //Get Token from SecureStorage
@@ -192,7 +187,7 @@ namespace MAUI_LAB.Services
                 }
                 else
                 {
-                    staff.ProfilePicture = data;
+                    staff.ProfilePicture = new byte[0];
                 }
 
                 Barrel.Current.Add(key: this.BaseUrl + $"/Get/{key}", data: staff, expireIn: TimeSpan.FromDays(1));
