@@ -4,6 +4,7 @@ using MAUI_LAB.Services;
 using MAUI_LAB.Services.Interface;
 using MAUI_LAB.ViewModels;
 using MAUI_LAB.Views;
+using Microsoft.Maui.Controls.Compatibility.Hosting;
 using Mopups.Hosting;
 
 namespace MAUI_LAB;
@@ -38,7 +39,7 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 fonts.AddFont("MaterialIcons-Regular.ttf", "MaterialIcons");
             })
-            .ConfigureMopups();
+            .UseMauiCompatibility();
         builder.ConfigureMauiHandlers(collection =>
         {
 #if __ANDROID__

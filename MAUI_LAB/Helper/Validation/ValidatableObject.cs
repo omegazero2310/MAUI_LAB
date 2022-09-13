@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace MAUI_LAB.Helper.Validation
 {
@@ -43,5 +44,6 @@ namespace MAUI_LAB.Helper.Validation
         {
             return $"{Value}";
         }
+        
     }
 }

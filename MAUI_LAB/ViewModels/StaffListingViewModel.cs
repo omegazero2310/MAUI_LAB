@@ -181,8 +181,16 @@ namespace MAUI_LAB.ViewModels
         public override void OnNavigatedTo(INavigationParameters parameters)
         {
             base.OnNavigatedTo(parameters);
-            if (Convert.ToBoolean(parameters["IsSuccess"]?.ToString() ?? ""))
-                this.IsRefreshing = true;
+            try
+            {
+                if (parameters.GetValue<bool>("IsSuccess"))//IsSuccess
+                    this.IsRefreshing = true;
+            }
+            catch (Exception)
+            {
+                this.IsRefreshing = false;
+            }
+            
         }
         public void OnAppearing()
         {

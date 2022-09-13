@@ -198,7 +198,6 @@ namespace MAUI_LAB.ViewModels
         #region Contructor
         public StaffEditViewModel(INavigationService navigationService, IAdminPartServices adminPartServices, IAdminStaffServices adminStaffServices, IPageDialogService pageDialogService) : base(navigationService)
         {
-            this.InitVaildations();
             this._adminStaffService = adminStaffServices;
             _adminPartService = adminPartServices;
             this._pageDialog = pageDialogService;
@@ -231,6 +230,31 @@ namespace MAUI_LAB.ViewModels
 
             this.EmailAddress.Validations.Add(new IsValidEmailRule<string> { ValidationMessage = AppResource.MSG_EMAIL_NOT_VALID });
         }
+        private void InitVaildations(AdminStaff adminStaff)
+        {
+            this.UserName = new ValidatableObject<string> { Value = adminStaff.StaffName };
+            this.Address = new ValidatableObject<string> { Value = adminStaff.Address };
+            this.PositionName = new ValidatableObject<string> { Value = adminStaff.PositionName };
+            this.PhoneNumber = new ValidatableObject<string> { Value = adminStaff.PhoneNumber };
+            this.Gender = new ValidatableObject<string> { Value = _staffGenders.Where(pos => pos.Value == adminStaff.Gender).FirstOrDefault().Key };
+            this.EmailAddress = new ValidatableObject<string> { Value = adminStaff.StaffName };
+
+            this.UserName.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = AppResource.MSG_USER_NAME_NOT_EMPTY });
+            this.UserName.Validations.Add(new IsLenghtValidRule<string> { MaximunLenght = 50, ValidationMessage = AppResource.MSG_USER_NAME_OVER_CHARACTER });
+            this.UserName.Validations.Add(new IsNotContainSpecialCharacterRule { ValidationMessage = AppResource.MSG_USER_NAME_CONTAIN_SPECIALCHARACTERS });
+
+            this.Address.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = AppResource.MSG_ADDRESS_CANNOT_EMPTY });
+            this.Address.Validations.Add(new IsNotContainSpecialCharacterRule { ValidationMessage = AppResource.MSG_USER_NAME_CONTAIN_SPECIALCHARACTERS });
+
+            this.PositionName.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = AppResource.MSG_POSITION_NOT_VALID });
+
+            this.PhoneNumber.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = AppResource.MSG_PHONE_NUMBER_NOT_EMPTY });
+            this.PhoneNumber.Validations.Add(new IsVaildPhoneNumberVNRule { ValidationMessage = AppResource.MSG_PHONE_NUMBER_NOT_VALID });
+
+            this.Gender.Validations.Add(new IsNotNullOrEmptyRule<string> { ValidationMessage = AppResource.MSG_GENDER_NOT_VALID });
+
+            this.EmailAddress.Validations.Add(new IsValidEmailRule<string> { ValidationMessage = AppResource.MSG_EMAIL_NOT_VALID });
+        }
 
         #region override method
         public override async void OnNavigatedTo(INavigationParameters parameters)
@@ -241,6 +265,8 @@ namespace MAUI_LAB.ViewModels
             {
                 if (parameters["Type"]?.ToString() == AppResource.Label_Staff_Add)
                 {
+
+                    this.InitVaildations();
                     this.Title = AppResource.Label_Staff_Add;
                     this.ID = null;
                     this.IsEditMode = true;
@@ -254,15 +280,15 @@ namespace MAUI_LAB.ViewModels
                 else if (parameters["Type"]?.ToString() == AppResource.Label_Staff_Update)
                 {
                     this.Title = AppResource.Label_Staff_Update;
-                    this.IsEditMode = true;
-                    this.ID = (int)parameters["Value"];
-                    await this.LoadStaffInfo((int)parameters["Value"]);
+                    this.IsEditMode = true;                    
+                    this.ID = parameters.GetValue<int>("Value");
+                    await this.LoadStaffInfo(parameters.GetValue<int>("Value"));
                 }
                 else if (parameters["Type"]?.ToString() == AppResource.Label_Staff_View)
                 {
                     this.Title = AppResource.Label_Staff_View;
                     this.IsEditMode = false;
-                    await this.LoadStaffInfo((int)parameters["Value"]);
+                    await this.LoadStaffInfo(parameters.GetValue<int>("Value"));
                 }
             }
         }
@@ -281,12 +307,8 @@ namespace MAUI_LAB.ViewModels
             if (adminStaff != null)
             {
                 this.ID = adminStaff.StaffID;
-                this.UserName.Value = adminStaff.StaffName;
-                this.Address.Value = adminStaff.Address;
-                this.PhoneNumber.Value = adminStaff.PhoneNumber;
-                this.SelectedStaffPosition = this.StaffPositions.Where(part => part.PartID == adminStaff.PartID).FirstOrDefault();
-                this.EmailAddress.Value = adminStaff.Email;
-                this.Gender.Value = _staffGenders.Where(pos => pos.Value == adminStaff.Gender).FirstOrDefault().Key;
+                this.InitVaildations(adminStaff);
+
             }
         }
         private async void ExecuteCommandSave()
