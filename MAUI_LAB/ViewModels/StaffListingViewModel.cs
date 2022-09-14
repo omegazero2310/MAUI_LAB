@@ -3,14 +3,8 @@ using MAUI_LAB.Entities.Respone;
 using MAUI_LAB.Helper;
 using MAUI_LAB.Properties;
 using MAUI_LAB.Services.Interface;
-using MAUI_LAB.Views;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MAUI_LAB.ViewModels
 {
@@ -53,7 +47,6 @@ namespace MAUI_LAB.ViewModels
             get { return _filterPrefix; }
             set { SetProperty(ref _filterPrefix, value); }
         }
-
         #endregion
 
         #region các command binding
@@ -167,6 +160,7 @@ namespace MAUI_LAB.ViewModels
                     }
                     this.Staffs.Add(user);
                 }
+                
             }
             catch (Exception ex)
             {

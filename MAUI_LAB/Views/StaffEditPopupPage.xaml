@@ -300,8 +300,10 @@
                 <StackLayout
                             Padding="0,0,0,10"
                             IsVisible="{Binding IsEditMode}"
-                            Orientation="Horizontal">
-                    <Grid HorizontalOptions="Center" VerticalOptions="Center">
+                            Orientation="Horizontal"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />

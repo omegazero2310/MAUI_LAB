@@ -11,7 +11,7 @@
     <StackLayout>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.7*" />
+                <RowDefinition Height="0.5*" />
                 <RowDefinition Height="5*" />
             </Grid.RowDefinitions>
 
@@ -28,14 +28,14 @@
                     </LinearGradientBrush>
                 </Frame.Background>
 
-                <StackLayout Margin="0,10,0,0" Orientation="Horizontal">
-                    <Grid>
+                <StackLayout Margin="0,10,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="7*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="50" />
+                            <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <Label
                                 Grid.Column="0"
@@ -43,14 +43,12 @@
                                 FontAttributes="Bold"
                                 FontSize="Medium"
                                 HorizontalOptions="CenterAndExpand"
-                                WidthRequest="200"
                                 Text="{helper:Translate Main_Tabbed_Page_Listing}"
                                 TextColor="White"
                                 VerticalOptions="CenterAndExpand" />
                         <Image
                                 Grid.Column="1"
                                 Grid.Row="0"
-                                WidthRequest="200"
                                 HorizontalOptions="End"
                                 Source="icon_add48.png"
                                 VerticalOptions="Center">
@@ -72,19 +70,19 @@
                     Grid.Row="1"
                     Margin="0,-15,0,0"
                     CornerRadius="10">
-                <StackLayout>
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                     <!--#region Thanh tìm kiếm-->
                     <Frame
                             Margin="0"
                             Padding="0"
                             BorderColor="Blue"
                             CornerRadius="20">
-                        <Grid Padding="0">
+                        <Grid Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="7*"/>
+                                <ColumnDefinition Width="8*"/>
                                 <ColumnDefinition Width="1*"/>
                             </Grid.ColumnDefinitions>
                             <custom:NoBorderEntry Grid.Row="0" Grid.Column="0" x:Name="srcBar" Placeholder="{Binding FilterPrefix}" HeightRequest="50" Margin="10,0,0,0">
