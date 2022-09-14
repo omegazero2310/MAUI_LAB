@@ -52,7 +52,7 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="20*"/>
                             </Grid.ColumnDefinitions>
-                            <Image Grid.Column="0" Source="person48.png" HorizontalOptions="StartAndExpand" Scale="1.5"/>
+                            <Image Grid.Column="0" Source="person48.png" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Scale="1.5"/>
                             <Entry Grid.Column="1" Placeholder="{helper:Translate Main_Page_PlaceHolderUserName}" Text="{Binding UserName}" ReturnType="Next" MaxLength="50" HorizontalOptions="StartAndExpand">
                                 <Entry.Behaviors>
                                     <behaviors:SpecialCharactersValidationBehavior />
@@ -69,7 +69,7 @@
                                 <ColumnDefinition Width="20*"/>
                             </Grid.ColumnDefinitions>
 
-                            <Image Grid.Column="0" Source="lock48.png" HorizontalOptions="StartAndExpand" Scale="1.5"/>
+                            <Image Grid.Column="0" Source="lock48.png" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Scale="1.5"/>
                             <Entry Grid.Column="1" Placeholder="{helper:Translate Main_Page_PlaceHolderPassword}" Text="{Binding Password}" ReturnType="Done"
                                 IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}" MaxLength="50" HorizontalOptions="StartAndExpand">
                                 <Entry.Behaviors>

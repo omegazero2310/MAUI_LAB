@@ -37,14 +37,7 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 fonts.AddFont("MaterialIcons-Regular.ttf", "MaterialIcons");
             })
-            .UseMauiCompatibility()
-            .ConfigureMauiHandlers(handler =>
-            {
-#if !WINDOWS
-                //handler.AddCompatibilityRenderers(typeof(Xamarin.CommunityToolkit.UI.Views.MediaElementRenderer).Assembly);
-#endif
-            }
-            );
+            .UseMauiCompatibility() ;
         builder.ConfigureMauiHandlers(collection =>
         {
 #if __ANDROID__
