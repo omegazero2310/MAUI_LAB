@@ -67,6 +67,7 @@
 	  <None Remove="Resources\Images\icon_search_blue.png" />
 	  <None Remove="Resources\Images\icon_star.png" />
 	  <None Remove="Resources\Images\loginpicture.svg" />
+	  <None Remove="Resources\Images\search48.svg" />
 	  <None Remove="Resources\Splash\splash.svg" />
 	</ItemGroup>
 
