@@ -119,7 +119,8 @@
                         <CollectionView
                                 x:Name="ItemsListView"
                                 ItemsSource="{Binding Staffs}"
-                                SelectionMode="None">
+                                SelectionMode="None"
+                            ItemSizingStrategy="MeasureFirstItem">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
                                     <StackLayout Orientation="Vertical">

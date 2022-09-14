@@ -20,36 +20,20 @@
                 </Grid.RowDefinitions>
                 <!--#region ảnh đăng nhập-->
 
-                <Frame Grid.Row="0"
-                   Padding="0"
-                   HasShadow="True"
-                   HorizontalOptions="FillAndExpand"
-                   VerticalOptions="FillAndExpand"
-                   CornerRadius="10" Margin="0" BackgroundColor="Transparent">
-                    <Image Source="loginpicture.png" Aspect="AspectFit" BackgroundColor="Transparent"></Image>
-                </Frame>
-                <Frame Grid.Row="0" 
-                   CornerRadius="5" 
-                   Padding="0" 
-                   BackgroundColor="Transparent"
-                   Opacity="10" 
-                   HorizontalOptions="EndAndExpand" 
-                   VerticalOptions="StartAndExpand" 
-                   Margin="0,0,5,0">
-                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,20,-5,0" >
-                        <Image Source="{Binding ImageLanguage}" HeightRequest="30" WidthRequest="30"/>
-                        <Picker Title="{helper:Translate Main_Page_LabelSelectLanguage}" 
-                        HorizontalOptions="CenterAndExpand" 
-                        VerticalOptions="CenterAndExpand"
+                <StackLayout Grid.Row="0" Grid.Column="0">
+                    <Image Source="loginpicture.png" Aspect="AspectFill" BackgroundColor="Transparent" ZIndex="1"/>
+                </StackLayout>
+                
+                <StackLayout Grid.Row="0" Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand" ZIndex="4">
+                    <Image Source="{Binding ImageLanguage}" HeightRequest="30" WidthRequest="30" ZIndex="4"/>
+                    <Picker Title="{helper:Translate Main_Page_LabelSelectLanguage}" 
                         WidthRequest="95"
-                        TextColor="WhiteSmoke"
+                        TextColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray950}}"
                         HorizontalTextAlignment="Center"
                         ItemsSource="{Binding ListLanguages}"
                         SelectedItem="{Binding SelectedLanguage}">
-                        </Picker>
-                    </StackLayout>
-
-                </Frame>
+                    </Picker>
+                </StackLayout>
                 <!--#endregion-->
 
                 <!--#region Phần các control-->

@@ -7,4 +7,12 @@ namespace MAUI_LAB;
 [Activity(Theme = "@style/Maui.SplashTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.Density)]
 public class MainActivity : MauiAppCompatActivity
 {
+    protected override void OnResume()
+    {
+        base.OnResume();
+    }
+    protected override void OnResumeFragments()
+    {
+        base.OnResumeFragments();
+    }
 }

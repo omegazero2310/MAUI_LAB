@@ -189,7 +189,7 @@ namespace MAUI_LAB.ViewModels
                 try
                 {
                     AdminUserServices.Logout();
-                    await this.NavigationService.NavigateAsync("/LoginPage");
+                    this.NavigationService.CreateBuilder().AddSegment("LoginPage").Navigate();
                 }
                 catch (Exception ex)
                 {

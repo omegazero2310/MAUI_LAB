@@ -322,9 +322,8 @@ namespace MAUI_LAB.ViewModels
             }
             LocalizationResourceManager.Instance.SetCulture(new System.Globalization.CultureInfo(language));
             //tìm ảnh bắt đầu bằng mã quốc gia kết thúc bằng từ flag
-            string prefix = this.GetType().Assembly.GetName().Name + ".AssetImages.";
-            string resName = prefix + language.ToLower().Replace("-","_") + "_flag.png";
-            this.ImageLanguage = ImageSource.FromResource(resName);
+            string resName = language.ToLower().Replace("-","_") + "_flag.png";
+            this.ImageLanguage = ImageSource.FromFile(resName);
         }
         #endregion
     }
