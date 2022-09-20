@@ -10,6 +10,14 @@ using System.Threading.Tasks;
 
 namespace MAUI_LAB.CustomControls
 {
+    /// <summary>
+    /// custom control kiểu kế thừa, thay đổi mapping handler
+    /// </summary>
+    /// <Modified>
+    /// Name Date Comments
+    /// annv3 20/09/2022 created
+    /// </Modified>
+    /// <seealso cref="Microsoft.Maui.Controls.Entry" />
     public class NoBorderEntry : Entry
     {
         public NoBorderEntry() : base()

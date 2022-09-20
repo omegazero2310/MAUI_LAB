@@ -3,6 +3,13 @@ using Microsoft.Maui.Handlers;
 
 namespace MAUI_LAB.CustomControls.Ios
 {
+    /// <summary>
+    /// vd custom hanlder của IOS
+    /// </summary>
+    /// <Modified>
+    /// Name Date Comments
+    /// annv3 20/09/2022 created
+    /// </Modified>
     public class CustomEntryHandlerIos : ViewHandler<ICustomEntry, UIKit.UITextView>
     {
         public CustomEntryHandlerIos(IPropertyMapper mapper, CommandMapper commandMapper = null) : base(mapper, commandMapper)

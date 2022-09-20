@@ -5,6 +5,14 @@ using Color = Android.Graphics.Color;
 
 namespace MAUI_LAB.CustomControls.Android
 {
+    /// <summary>
+    /// VD Custom handler cho nền tảng android
+    /// </summary>
+    /// <Modified>
+    /// Name Date Comments
+    /// annv3 20/09/2022 created
+    /// </Modified>
+    /// <seealso cref="Microsoft.Maui.Handlers.ViewHandler&lt;MAUI_LAB.CustomControls.Interface.ICustomEntry, Android.Widget.EditText&gt;" />
     public partial class CustomEntryHandlerAndroid : ViewHandler<ICustomEntry, EditText>
     {
         public CustomEntryHandlerAndroid(IPropertyMapper mapper, CommandMapper commandMapper = null) : base(mapper, commandMapper)
