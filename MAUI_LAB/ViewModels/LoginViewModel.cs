@@ -217,7 +217,7 @@ namespace MAUI_LAB.ViewModels
                     }
                     //lấy khung config tabbed page từ page MainTabbedPage, gọi prism để tự thêm các page vào code
                     this.NavigationService.CreateBuilder()
-                        .AddTabbedSegment("MainTabbedPage", builder=> this.InitTabbedPage(builder)).Navigate();
+                        .AddTabbedSegment("MainTabbedPage", builder => this.InitTabbedPage(builder)).Navigate();
 
                     //await this.NavigationService.NavigateAsync("/MainTabbedPage");
                 }

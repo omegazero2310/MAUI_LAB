@@ -18,11 +18,14 @@ namespace MAUI_LAB.CustomControls
         }
         private void Init()
         {
+            //AppendToMapping thêm vào mapping có sẵn
+            //ModifyMapping thay đổi mapping có sẵn
+            //PrependToMapping thay đổi mapping trước khi MAUI thêm mapping mặc định
             Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("NoBorderEntry", (handler, view) =>
             {
 #if ANDROID
                 GradientDrawable gd = new GradientDrawable();
-                gd.SetColor(Android.Graphics.Color.Transparent);
+                gd.SetColor(Colors.Transparent.ToInt());
                 handler.PlatformView.SetSelectAllOnFocus(true);
                 handler.PlatformView.SetBackground(gd);
                 handler.PlatformView.SetPadding(20, 0, 0, 0);

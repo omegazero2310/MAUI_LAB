@@ -1,4 +1,6 @@
 ﻿using CommunityToolkit.Maui;
+using MAUI_LAB.CustomControls;
+using MAUI_LAB.CustomControls.Android;
 using MAUI_LAB.Services;
 using MAUI_LAB.Services.Interface;
 using MAUI_LAB.ViewModels;
@@ -40,8 +42,12 @@ public static class MauiProgram
             .UseMauiCompatibility() ;
         builder.ConfigureMauiHandlers(collection =>
         {
-#if __ANDROID__
-            //collection.AddHandler(typeof(NoBorderEntry), typeof(NoBorderEntryHandlerAndroid));
+#if ANDROID
+            collection.AddHandler(typeof(CustomEntry), typeof(CustomEntryHandlerAndroid));
+#endif
+
+#if IOS
+            collection.AddHandler(typeof(CustomEntry), typeof(CustomEntryHandlerIos));
 #endif
 
         });
