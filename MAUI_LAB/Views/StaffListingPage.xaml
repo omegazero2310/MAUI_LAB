@@ -77,16 +77,22 @@
                             Padding="0"
                             BorderColor="Blue"
                             CornerRadius="20"
-                            HeightRequest="50">
-                        <Grid Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            HeightRequest="40">
+                        <Grid Padding="0">
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="40"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="7*"/>
                                 <ColumnDefinition Width="1*"/>
                             </Grid.ColumnDefinitions>
-                            <custom:NoBorderEntry Grid.Row="0" Grid.Column="0" x:Name="srcBar" Placeholder="{Binding FilterPrefix}" HeightRequest="50" Margin="10,0,0,0">
+                            <custom:NoBorderEntry Grid.Row="0" 
+                                                  Grid.Column="0" 
+                                                  x:Name="srcBar" 
+                                                  Placeholder="{Binding FilterPrefix}" 
+                                                  HeightRequest="40" Margin="10,0,0,0"
+                                                  HorizontalOptions="StartAndExpand" 
+                                                  VerticalOptions="CenterAndExpand">
                                 <custom:NoBorderEntry.Behaviors>
                                     <toolkit:EventToCommandBehavior
                                             Command="{Binding CommandSearch}"
@@ -102,9 +108,8 @@
                                     Margin="0,0,-10,0"
                                     Source="search48.svg"
                                     CornerRadius="25"
-                                    Scale="0.68"
-                                    RotationY="180"
-                                    >
+                                    Scale="0.6"
+                                    RotationY="180">
                                 <ImageButton.Behaviors>
                                     <toolkit:IconTintColorBehavior TintColor="White"/>
                                 </ImageButton.Behaviors>
